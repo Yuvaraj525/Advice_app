@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gotham SSm A', 'Gotham SSm B', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    color: #181b21;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    z-index: 1000;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.header:hover {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    width: 120px;
+}
+
+.tesla-logo {
+    width: 100%;
+    height: auto;
+    color: #000;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #393c41;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.nav a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #393c41;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.nav-right a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.menu-btn {
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.menu-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 40px 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Background Images - Using gradient placeholders */
+.hero {
+    background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.section-2 {
+    background: linear-gradient(180deg, #e8e8e8 0%, #f5f5f5 100%);
+}
+
+.section-3 {
+    background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+}
+
+.section-4 {
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+}
+
+.section-5 {
+    background: linear-gradient(180deg, #3498db 0%, #2980b9 100%);
+}
+
+.section-6 {
+    background: linear-gradient(180deg, #16a085 0%, #1abc9c 100%);
+}
+
+.section-7 {
+    background: linear-gradient(180deg, #95a5a6 0%, #7f8c8d 100%);
+}
+
+/* Adjust text color for dark backgrounds */
+.hero .hero-title,
+.section-3 .hero-title,
+.section-4 .hero-title,
+.section-5 .hero-title,
+.section-6 .hero-title,
+.section-7 .hero-title {
+    color: #fff;
+}
+
+.hero .hero-subtitle,
+.section-3 .hero-subtitle,
+.section-4 .hero-subtitle,
+.section-5 .hero-subtitle,
+.section-6 .hero-subtitle,
+.section-7 .hero-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-content {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.hero-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #5c5e62;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 60px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: rgba(23, 26, 32, 0.8);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: rgba(23, 26, 32, 1);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.65);
+    color: #393c41;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* Hero Specs */
+.hero-specs {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.spec {
+    text-align: center;
+}
+
+.spec-value {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.spec-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 40px;
+    background: transparent;
+    z-index: 999;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #393c41;
+    font-size: 12px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .nav-right a {
+        display: none;
+    }
+
+    .hero {
+        padding: 80px 20px 40px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 40px;
+    }
+
+    .hero-specs {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .spec-value {
+        font-size: 24px;
+    }
+
+    .footer {
+        padding: 15px 20px;
+    }
+
+    .footer-links {
+        gap: 15px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .hero-specs {
+        gap: 20px;
+    }
+
+    .spec-value {
+        font-size: 20px;
+    }
+
+    .spec-label {
+        font-size: 11px;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+    }
+}
+
+/* Smooth Scrolling Animation */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-specs {
+    animation: fadeIn 1s ease-out 0.3s backwards;
+}
